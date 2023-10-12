@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Controle de acesso de veículos">
+    <meta name="keywords" content="controle, acesso, veículos, cadastro">
+    <meta name="author" content="Arthur Scarpin de Carvalho">
+    <title>Tela de cadastro de placas</title>
+    <link rel="stylesheet" href="../static/css/home_cadastro.css">
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <div class="logo">
+                <img src="../static/css/images/guarda-florestal.png">
+            </div><!--logo-->
+            <nav class="desktop">
+                <ul>
+                    <li><a href="{{ url_for('home')}}">Home</a></li>
+                    <li><a style= "color: #646569; padding: 10px; border-radius: 5px;" href="{{ url_for('home_cadastro')}}">Cadastro</a></li>
+                    <li><a href="{{ url_for('login_alterar_senha')}}">Alterar senha</a></li>
+                    <li><a href="{{ url_for('login')}}">Logout</a></li>
+                </ul>
+            </nav>
+        </div><!--container1-->
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="container2">
+                <div class="box">
+                    <form action="/home_cadastro" method="post">
+                        <h2>Cadastrar Placa</h2>
+                        <label for="placa">Nº Placa:</label>
+                        <input type="text" id="placa" name="placa" required>
+                        <input type="submit" value="Cadastrar">
+                    </form>
+                </div><!--box-->
+            </div><!--container2-->
+
+            <div class="container3">
+                <div class="box">
+                    <div class="box-header">
+                        <h2>Procurar placas</h2>
+                        <form class="search-form" id="search-form">
+                            <input type="search" id="search" name="pesquisa">
+                            <input type="submit" value="Pesquisar">
+                        </form>
+                    </div>
+                    <div id="table-container">
+                    </div><!--table-container-->
+                </div><!--box-->
+            </div><!--container3-->
+        </div><!--main-container-->
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='javascript/home_cadastro.js') }}"></script>
+</body>
+</html>

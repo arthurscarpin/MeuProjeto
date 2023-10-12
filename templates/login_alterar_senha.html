@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Controle de acesso de veículos">
+    <meta name="keywords" content="controle, acesso, veículos, cadastro">
+    <meta name="author" content="Arthur Scarpin de Carvalho">
+    <title>Tela de alteração de senha do usuário</title>
+    <link rel="stylesheet" href="../static/css/login_alterar_senha.css">
+</head>
+<body>
+    <main>
+        <div class="user-form">
+            <form action="/login_alterar_senha" id="alterarSenhaForm" method="post">
+                <div id="alerta-sucesso" class="alerta-sucesso">
+                    <!-- Conteúdo do alerta de sucesso -->
+                </div>       
+                <div id="alerta-erro" class="alerta-erro">
+                    <!-- Conteúdo do alerta de erro -->
+                </div>
+                <a href="{{ url_for('home')}}"><-- Voltar</a>
+                <p id="mensagem" class="mensagem"></p>
+                <h2>Alterar senha</h2>
+                <label>E-mail</label>
+                <input type="email" name="email" id="email"></input>
+                <label>Senha atual</label>
+                <input type="password" name="senha_atual" id="senha_atual"></input>
+                <label>Nova Senha</label>
+                <input type="password" name="nova_senha" id="nova_senha"></input>
+                <button type="submit">Salvar</button>
+            </form><!--user-form-->
+        </div>
+    </main>
+</body>
+<script src="{{ url_for('static', filename='javascript/login_alterar_senha.js') }}"></script>
+</html>

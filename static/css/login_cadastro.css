@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    background-color: #ceb5a9;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    opacity: 0.8;
+    height: 100vh;
+}
+
+.box {
+    padding: 30px;
+    max-width: 300px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: #744630;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+label {
+    font-size: 14px;
+    padding: 5px;
+    color: #646569;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background-color: #646569;
+    color: #ffffff;
+    cursor: text;
+    border: 2px solid #744630;
+    outline: none;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #744630;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    transition: 0.3;
+}
+
+a {
+    text-decoration: none;
+    color: #744630;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.container-right {
+    flex: 1;
+    height: 100%;
+    background-image: url(images/esquilo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mensagem.erro {
+    color: #c00;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.mensagem.sucesso {
+    color: #016438;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Efeitos */
+a:hover {
+    color: #ceb5a9;
+}
+
+input[type="submit"]:hover {
+    background-color: #ceb5a9;
+}
+
+/* Design responsivo */
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        background-color: #ffffff;
+    }
+
+    .container-left {
+        height: auto;
+    }
+
+    .container-right {
+        display: none;
+    }
+}

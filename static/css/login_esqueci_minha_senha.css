@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    background-color: #faebc8;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    opacity: 0.8;
+    height: 100vh;
+}
+
+.box {
+    padding: 30px;
+    max-width: 300px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: #e6646e;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #646569;
+}
+
+label {
+    font-size: 14px;
+    padding: 5px;
+    color: #646569;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+input[type="email"] {
+    background-color: #646569;
+    color: #ffffff;
+    cursor: text;
+    text-align: center;
+    border: 2px solid #e6646e;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #e6646e;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    transition: 0.3;
+}
+
+a {
+    text-decoration: none;
+    color: #646569;
+    display: block;
+    margin-top: 10px;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.container-right {
+    flex: 1;
+    height: 100%;
+    background-image: url(images/macaco.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.alerta.sucesso {
+    color: #016438;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.alerta.erro {
+    color: #c00;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Efeitos */
+a:hover {
+    color: #ff8087;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff8087;
+}
+
+/* Design responsivo */
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        background-color: #ffffff;
+    }
+
+    .container-left {
+        height: auto;
+    }
+
+    .container-right {
+        display: none;
+    }
+}

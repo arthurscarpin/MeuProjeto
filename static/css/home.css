@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.container1 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    padding: 15px 2%;
+    background-color: #2bc48a;
+    position: relative;
+}
+
+header div.logo {
+    display: inline-block;
+}
+
+header div.logo img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+header nav.desktop {
+    float: right;
+}
+
+header nav.desktop ul {
+    list-style-type: none;
+}
+
+header nav.desktop ul li {
+    float: left;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+header nav.desktop ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: top;
+    height: 100vh;
+}
+
+.container2 .box {
+    text-align: center;
+    padding: 15px;
+}
+
+.container2 .box h2{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #2dad42;
+}
+
+.box img {
+    margin: 10px;
+    width: 640px;
+    height: 480px;
+    border: 5px solid #2dad42;
+    border-radius: 15px;
+}
+
+.box p{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #2dad42;
+}
+
+.placa-var {
+    color: #646569;
+}
+
+.data-var {
+    color: #646569;
+}
+
+.status-autorizado {
+    background-color: #016438;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.status-nao-autorizado {
+    background-color: #c00;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+/* Efeitos */
+header nav.desktop ul li a:hover {
+    background: #2dad42;
+    color: #646569; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Design responsivo */
+@media only screen and (max-width: 768px) {
+    header div.logo {
+        text-align: center;
+    }
+    
+    header div.logo img {
+        display: none;
+    }
+
+    header nav.desktop {
+        float: none;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    header nav.desktop ul li {
+        float: none;
+        display: block;
+        margin: 25px 10px;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    .box h2 {
+        font-size: 24px;
+    }
+
+    .box img {
+        width: 90%;
+        height: auto;
+    }
+}

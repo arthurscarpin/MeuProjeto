@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Controle de acesso de veículos">
+    <meta name="keywords" content="controle, acesso, veículos, cadastro">
+    <meta name="author" content="Arthur Scarpin de Carvalho">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+    <main>
+        <div class="container-left">
+            <div class="box">
+                <form action="/login" id="login" method="post">
+                    {% set mensagem = get_flashed_messages() %}
+                    {% if mensagem %}
+                        <div class="flashed_alerta">
+                            {{mensagem[0]}}
+                        </div><!--flashed_alerta-->
+                    {% endif %}
+                    <h2>Acesse sua conta</h2>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email">
+                    <label for="password" >Senha</label>
+                    <input type="password" name="senha" id="senha">
+                    <div class="form-buttons">
+                        <input type="submit" name="entrar" value="Entrar" id="btn-entrar">
+                        <a href="{{ url_for('login_esqueci_minha_senha') }}">Esqueci minha senha</a>
+                    </div><!--form-buttons-->
+                    <a href="{{ url_for('login_cadastro') }}">Crie sua conta</a>
+                </form>
+            </div><!--box-->
+        </div><!--container-left-->
+        <div class="container-right">
+            <div class="container-right" style="background-image: url('../static/css/images/background.png')"></div>
+        </div><!--container-right-->
+    </main>
+</body>
+</html>

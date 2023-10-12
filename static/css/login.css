@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+    background-image: url('images/floresta.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+    overflow: hidden; 
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    opacity: 0.8;
+    height: 100vh;
+}
+
+.box {    
+    padding: 30px;
+    max-width: 300px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: #2bc48a;
+}
+
+.flashed_alerta {
+    text-align: center;
+    padding-bottom: 20px;
+    color: #c00;
+    font-size: 14px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+label {
+    font-size: 14px;
+    padding: 5px;
+    color: #646569;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+}
+
+input[type="email"],
+input[type="password"] {
+    background-color: #646569;
+    color: #ffffff;
+    cursor: text;
+    border: 2px solid #2bc48a;
+    outline: none;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #2bc48a;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    transition: 0.3;
+}
+
+a {
+    text-decoration: none;
+    color: #646569;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.container-right {
+    flex: 1;
+    height: 100%;
+    background-image: url(images/ambiental.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Efeitos */
+a:hover {
+    color: #2bc48a;
+}
+
+input[type="submit"]:hover {
+    background-color: #2bc48a;
+}
+
+/* Design responsivo */
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        background-color: #ffffff;
+    }
+
+    .container-left {
+        height: auto;
+    }
+
+    .container-right {
+        display: none;
+    }
+
+    a {
+        padding-left: 10px;
+    }
+}

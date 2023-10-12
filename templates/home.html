@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Controle de acesso de veículos">
+    <meta name="keywords" content="controle, acesso, veículos, cadastro">
+    <meta name="author" content="Arthur Scarpin de Carvalho">
+    <title>Tela principal</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <div class="logo">
+                <img src="../static/css/images/guarda-florestal.png">
+            </div><!--logo-->
+            <nav class="desktop">
+                <ul>
+                    <li><a style="color: #646569; padding: 10px; border-radius: 5px;" href="{{ url_for('home')}}">Home</a></li>
+                    <li><a href="{{ url_for('home_cadastro')}}">Cadastro</a></li>
+                    <li><a href="{{ url_for('login_alterar_senha')}}">Alterar senha</a></li>
+                    <li><a href="{{ url_for('login')}}">Logout</a></li>
+                </ul>
+            </nav>
+        </div><!--container-->
+    </header>
+    <main>
+        <div class="container2">
+            <div class="box">
+                <h2>Acesso de veículos</h2>
+                <img src="{{ url_for('camera')}}" width="50%">
+                <div id="placa-div">
+                    <p>Nº Placa:</p>
+                    <p>Data Hora:</p>
+                </div>
+            </div><!--box-->
+        </div><!--container-->
+    </main>
+    <script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+</body>
+</html>
